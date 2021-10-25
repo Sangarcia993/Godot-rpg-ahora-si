@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Swing + Escudo.wav-dd656e0bd4a66cfdc47b2afc4b3cf20c.sample"
+
+[deps]
+
+source_file="res://Audio/Swing + Escudo.wav"
+dest_files=[ "res://.import/Swing + Escudo.wav-dd656e0bd4a66cfdc47b2afc4b3cf20c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
