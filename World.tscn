@@ -495,7 +495,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TextureRectBackground" type="TextureRect" parent="."]
+[node name="Background2" type="TextureRect" parent="."]
 visible = false
 margin_right = 320.0
 margin_bottom = 180.0
@@ -509,7 +509,7 @@ __meta__ = {
 position = Vector2( 160.472, 90 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 320, 180 )
+region_rect = Rect2( 0, 0, 840, 670 )
 
 [node name="DirtCliffTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
@@ -527,6 +527,10 @@ tile_data = PoolIntArray( -65535, 0, 0, -65534, 0, 2, -65526, 0, 0, -65525, 0, 2
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 199, 82 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
+current = true
+smoothing_enabled = true
 
 [node name="Bushes" type="YSort" parent="YSort"]
 
