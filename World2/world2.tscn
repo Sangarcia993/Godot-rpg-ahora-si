@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/bush.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="world2" type="Node2D"]
+
+[node name="Bush" parent="." instance=ExtResource( 1 )]
+position = Vector2( 196.855, 64.3294 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 54.7005, 71.4849 )
+
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+current = true
+smoothing_enabled = true

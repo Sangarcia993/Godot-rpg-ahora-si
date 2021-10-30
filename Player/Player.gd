@@ -18,8 +18,10 @@ onready var animationState = animationTree.get("parameters/playback")
 
 var velocity = Vector2.ZERO
 
+
 func _ready():
 	animationTree.active = true
+	self.global_position = Vector2(100,0)
 
 func _process(delta):
 	match state:
