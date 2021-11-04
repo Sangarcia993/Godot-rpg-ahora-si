@@ -13,6 +13,10 @@ config_version=4
 config/name="Juego Godot"
 run/main_scene="res://Menu/Menu.tscn"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [display]
 
 window/size/width=320

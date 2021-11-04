@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const acceleration = 500
-const max_speed = 120
+export var acceleration = 500
+export var max_speed = 120
 const friction = 500
 
 enum {
@@ -18,10 +18,9 @@ onready var animationState = animationTree.get("parameters/playback")
 
 var velocity = Vector2.ZERO
 
-
 func _ready():
 	animationTree.active = true
-	self.global_position = Vector2(100,0)
+	#self.global_position = Vector2(100,0)
 
 func _process(delta):
 	match state:

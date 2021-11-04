@@ -1,3 +1,92 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
 
-[node name="CombatArena" type="Node2D"]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.png" type="Texture" id=2]
+[ext_resource path="res://Enemies/Goblin.png" type="Texture" id=3]
+[ext_resource path="res://CombatArena/CombatArena.gd" type="Script" id=4]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
+[ext_resource path="res://CombatArena/Goblin.gd" type="Script" id=6]
+
+[node name="CombatArena" type="Control"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+texture = ExtResource( 1 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 126.145
+margin_top = 101.225
+margin_right = 189.145
+margin_bottom = 169.225
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackButton" type="Button" parent="VBoxContainer"]
+modulate = Color( 0.00392157, 1, 0, 1 )
+margin_right = 63.0
+margin_bottom = 20.0
+focus_neighbour_top = NodePath("../QuitButton")
+text = "Attack"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemsButton" type="Button" parent="VBoxContainer"]
+margin_top = 24.0
+margin_right = 63.0
+margin_bottom = 44.0
+text = "Items"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+margin_top = 48.0
+margin_right = 63.0
+margin_bottom = 68.0
+focus_neighbour_bottom = NodePath("../StartButton")
+text = "Quit"
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" type="Sprite" parent="YSort"]
+position = Vector2( 269.54, 59.3962 )
+scale = Vector2( 2.97308, 2.97308 )
+texture = ExtResource( 2 )
+hframes = 60
+frame = 12
+
+[node name="Goblin" type="Sprite" parent="YSort"]
+position = Vector2( 52.8958, 56.3093 )
+rotation = 3.14159
+scale = Vector2( 3.21165, -3.21165 )
+texture = ExtResource( 3 )
+script = ExtResource( 6 )
+
+[node name="Stats" parent="YSort/Goblin" instance=ExtResource( 5 )]
+max_health = 4
+
+[node name="Label" type="Label" parent="YSort/Goblin"]
+margin_left = 7.61021
+margin_top = 14.1263
+margin_right = 33.6102
+margin_bottom = 28.1263
+rect_scale = Vector2( -1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="VBoxContainer/AttackButton" to="." method="_on_AttackButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/AttackButton" to="YSort/Goblin" method="_on_AttackButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="no_health" from="YSort/Goblin/Stats" to="YSort/Goblin" method="_on_Stats_no_health"]
