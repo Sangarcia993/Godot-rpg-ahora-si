@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Menu/Item_Menu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer2"]
+margin_right = 41.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="Label" parent="Panel/VBoxContainer2/HBoxContainer"]
+margin_top = 3.0
+margin_bottom = 17.0
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer2/HBoxContainer"]
+margin_left = 4.0
+margin_right = 41.0
+margin_bottom = 20.0
+text = "Use"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 41.0
+margin_bottom = 24.0
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 259.152
+margin_top = 158.484
+margin_right = 322.152
+margin_bottom = 178.484
+rect_min_size = Vector2( 47.185, 0 )
+text = "Go back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Panel/VBoxContainer2/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
