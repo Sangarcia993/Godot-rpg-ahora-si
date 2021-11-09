@@ -588,10 +588,14 @@ position = Vector2( 16, 96 )
 position = Vector2( 32, 96 )
 
 [node name="World2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -200, 181 )
+position = Vector2( 194.829, 237.169 )
 next_scene_path = "res://World2/world2.tscn"
+battle_name = "IMPORTANTE"
 
 [node name="Battle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 248, 61 )
+position = Vector2( 363.464, 79.0203 )
 scale = Vector2( 0.3, 0.3 )
 next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 366
+player_spawn_location_y = 80
+battle_name = "Battle"

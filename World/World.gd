@@ -1,6 +1,6 @@
 extends Node2D
 
-
+"""
 const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
 var db #database object
 var db_name = "res://DataStore/database" # path to db
@@ -28,6 +28,6 @@ func readFromDB():
 	var tableName = "Player"
 	db.query("select * from " + tableName + ";")
 	for i in range(0, db.query_result.size()):
-		print("Quary results:", db.query_result[i]["Name"], db.query_result[i]["Attack"])
+		print("Quary results:", db.query_result[i]["Name"], db.query_result[i]["Attack"])"""
 	
 	

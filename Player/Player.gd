@@ -20,7 +20,7 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	animationTree.active = true
-	#self.global_position = Vector2(100,0)
+	self.global_position = Vector2(Global.player_position_x, Global.player_position_y)
 
 func _process(delta):
 	match state:
@@ -29,7 +29,8 @@ func _process(delta):
 		ROLL:
 			pass
 		ATTACK:
-			attack_state(delta)
+			pass
+			#attack_state(delta)
 	
 	
 	
@@ -52,7 +53,7 @@ func move_state(delta):
 
 	velocity = move_and_slide(velocity)
 	
-	if Input.is_action_just_pressed("attack"):
+	"""if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 	
 func attack_state(delta):
@@ -60,4 +61,4 @@ func attack_state(delta):
 	animationState.travel("Attack")
 	
 func attack_animation_finished():
-	state = MOVE
+	state = MOVE"""
