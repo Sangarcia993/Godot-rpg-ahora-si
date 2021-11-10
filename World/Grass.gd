@@ -1,6 +1,6 @@
 extends Node2D
 
-func _process(delta):
+"""func _process(delta):
 	if Input.is_action_just_pressed("attack"):
 		var GrassEffect = load("res://Effects/GrassEffects.tscn")
 		var grassEffect = GrassEffect.instance()
@@ -8,4 +8,4 @@ func _process(delta):
 		world.add_child(grassEffect)
 		grassEffect.global_position = global_position
 		
-		queue_free()
+		queue_free()"""
