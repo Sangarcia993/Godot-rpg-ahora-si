@@ -58,6 +58,7 @@ func move_state(delta):
 	if Input.is_action_just_pressed("attack"):
 		$Label.text = "Coins: " + str(Global.coins)
 		$Label2.text = "Health: " + str(Global.player_health)
+		$Particles2D.amount += 200
 	if Input.is_action_just_released("attack"):
 		$Label.text = ""
 		$Label2.text = ""
