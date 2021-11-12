@@ -387,3 +387,21 @@ parameters/playback = SubResource( 34 )
 parameters/Attack/blend_position = Vector2( 0, 0 )
 parameters/Idle/blend_position = Vector2( -0.00463676, 1.0431 )
 parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -20.6901
+margin_top = -40.0452
+margin_right = 19.3099
+margin_bottom = -26.0452
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -22.0249
+margin_top = -62.07
+margin_right = 17.9751
+margin_bottom = -48.07
+__meta__ = {
+"_edit_use_anchors_": false
+}

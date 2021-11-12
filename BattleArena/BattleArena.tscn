@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+
+[node name="BattleArena" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 182.212, 108.126 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( -66.8385, -33.0544, 358.499, 216.082 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 184.725, 108.56 )
+scale = Vector2( 2, 2 )
+current = true
+zoom = Vector2( 1.052, 1.118 )
+smoothing_enabled = true
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 298.442, 101.43 )

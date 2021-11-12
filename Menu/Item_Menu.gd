@@ -18,5 +18,8 @@ func _on_Button_pressed():
 	
 
 
+
+
+
 func _on_Exit_pressed():
 	get_tree().change_scene(Global.pre_scene)

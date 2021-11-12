@@ -20,7 +20,9 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	animationTree.active = true
+	print(Global.player_position_x)
 	self.global_position = Vector2(Global.player_position_x, Global.player_position_y)
+	print(Global.pre_scene)
 
 func _process(delta):
 	match state:
@@ -52,6 +54,14 @@ func move_state(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 
 	velocity = move_and_slide(velocity)
+	
+	if Input.is_action_just_pressed("attack"):
+		$Label.text = "Coins: " + str(Global.coins)
+		$Label2.text = "Health: " + str(Global.player_health)
+	if Input.is_action_just_released("attack"):
+		$Label.text = ""
+		$Label2.text = ""
+	
 	
 	"""if Input.is_action_just_pressed("attack"):
 		state = ATTACK
