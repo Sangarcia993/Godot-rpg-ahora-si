@@ -402,7 +402,7 @@ tile_data = PoolIntArray( -589837, 0, 0, -589836, 0, 1, -589835, 0, 1, -589834, 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 199, 82 )
+position = Vector2( 204.045, 151.794 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -631,6 +631,7 @@ position = Vector2( 299.508, 225.756 )
 position = Vector2( 313.144, 13.4162 )
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( -43.7265, 76.5214 )
 next_scene_path = "res://World2/world2.tscn"
 battle_name = "IMPORTANTE"
 
@@ -641,3 +642,8 @@ next_scene_path = "res://CombatArena/CombatArena.tscn"
 player_spawn_location_x = 366
 player_spawn_location_y = 80
 battle_name = "Battle"
+
+[node name="StorePortal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 202.656, 216.951 )
+next_scene_path = "res://Store/Store.tscn"
+battle_name = "STORE"

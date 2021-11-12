@@ -442,4 +442,9 @@ position = Vector2( -144.383, -78.0616 )
 next_scene_path = "res://World/World.tscn"
 battle_name = "IMPORTANTE"
 
+[node name="StorePortal" parent="." instance=ExtResource( 10 )]
+position = Vector2( 27.7492, 181.633 )
+next_scene_path = "res://World2/world2.tscn"
+battle_name = "STORE"
+
 [connection signal="finished" from="YSort/VideoPlayer" to="." method="_on_VideoPlayer_finished"]
