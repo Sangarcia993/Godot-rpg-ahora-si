@@ -1,16 +1,29 @@
 tool
 
+
 extends Area2D
+
+export var world = 1
 
 export(String, FILE) var next_scene_path = ""
 export(int) var player_spawn_location_x = 0
 export(int) var player_spawn_location_y = 0
+
+export var current_place = 1
 
 
 export(String) var battle_name = ""
 export var coins = 0
 
 func _ready():
+	if current_place == 1:
+		Global.pre_scene = "res://World/World.tscn"
+	elif current_place == 2:
+		Global.pre_scene = "res://World2/world2.tscn"
+	elif current_place == 3:
+		Global.pre_scene = "res://World3/World3.tscn"
+	elif current_place == 4:
+		Global.pre_scene = "res://World4/World4.tscn"
 	if Global.battles_fought.count(battle_name) == 1:
 		queue_free()
 	if battle_name == "IMPORTANTE":
@@ -31,6 +44,7 @@ func _get_configuration_warning() -> String:
 		return ""
 
 func _on_Portal_body_entered(body):
+	Global.world = world
 	if get_tree().change_scene(next_scene_path) != OK:
 		print("scene unavailable")
 	else:	
@@ -41,7 +55,4 @@ func _on_Portal_body_entered(body):
 		Global.player_position_x = player_spawn_location_x
 		Global.player_position_y = player_spawn_location_y
 		
-
-
 		
-

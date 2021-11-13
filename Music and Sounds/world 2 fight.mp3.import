@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/world 2 fight.mp3-4d5d12b67adba83d224724bd5b2e7392.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/world 2 fight.mp3"
+dest_files=[ "res://.import/world 2 fight.mp3-4d5d12b67adba83d224724bd5b2e7392.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

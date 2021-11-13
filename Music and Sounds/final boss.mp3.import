@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/final boss.mp3-ea689351d4970c7f021e9a282834c38d.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/final boss.mp3"
+dest_files=[ "res://.import/final boss.mp3-ea689351d4970c7f021e9a282834c38d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -18,5 +18,6 @@ func _on_Stats_no_health():
 	var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 	rng.randomize()
 	Global.enemy_health = rng.randi_range(2, 7)
-	Global.coins += rng.randi_range(1, 10)
-	get_tree().change_scene("res://World/World.tscn")
+	Global.coins += rng.randi_range(5, 10)
+	print(Global.pre_scene)
+	get_tree().change_scene(Global.pre_scene)

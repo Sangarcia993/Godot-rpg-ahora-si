@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Portal/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Bush.png" type="Texture" id=9]
+[ext_resource path="res://Music and Sounds/world1.mp3" type="AudioStream" id=10]
+[ext_resource path="res://World/World.gd" type="Script" id=11]
+[ext_resource path="res://Portal/Captura de pantalla 2021-11-12 a la(s) 08.55.47.png" type="Texture" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -377,9 +380,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/z_index = 0
 
 [node name="World" type="Node2D"]
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 160.428, 78.7085 )
@@ -402,7 +410,7 @@ tile_data = PoolIntArray( -589837, 0, 0, -589836, 0, 1, -589835, 0, 1, -589834, 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 204.045, 151.794 )
+position = Vector2( 199, 82 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player"]
 current = true
@@ -630,20 +638,31 @@ position = Vector2( 299.508, 225.756 )
 [node name="Tree4" parent="YSort/Trees" instance=ExtResource( 8 )]
 position = Vector2( 313.144, 13.4162 )
 
+[node name="Store" parent="." instance=ExtResource( 1 )]
+position = Vector2( -38.6879, 75.5583 )
+next_scene_path = "res://Store/Store.tscn"
+battle_name = "IMPORTANTE"
+
+[node name="battle 1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200.478, 210.565 )
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 200
+player_spawn_location_y = 210
+battle_name = "battle1"
+
+[node name="Bush" type="Sprite" parent="battle 1"]
+position = Vector2( 3.2399, -1.39333 )
+texture = ExtResource( 9 )
+
 [node name="Portal" parent="." instance=ExtResource( 1 )]
-position = Vector2( -43.7265, 76.5214 )
+position = Vector2( 402.055, 74.1131 )
 next_scene_path = "res://World2/world2.tscn"
 battle_name = "IMPORTANTE"
 
-[node name="Battle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 363.464, 79.0203 )
-scale = Vector2( 0.3, 0.3 )
-next_scene_path = "res://CombatArena/CombatArena.tscn"
-player_spawn_location_x = 366
-player_spawn_location_y = 80
-battle_name = "Battle"
+[node name="Bush" type="Sprite" parent="Portal"]
+position = Vector2( 1.48834, 0.153778 )
+scale = Vector2( 0.445998, 0.30656 )
+texture = ExtResource( 12 )
 
-[node name="StorePortal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 202.656, 216.951 )
-next_scene_path = "res://Store/Store.tscn"
-battle_name = "STORE"
+[connection signal="body_entered" from="Store" to="." method="_on_Portal_body_entered"]
+[connection signal="body_entered" from="Portal" to="." method="_on_Portal_body_entered"]

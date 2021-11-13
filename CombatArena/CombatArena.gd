@@ -1,13 +1,27 @@
 extends Control
 
-
 const SQLite = preload("res://addons/godot-sqlite/bin/gdsqlite.gdns")
 var db #database object
 var db_name = "res://DataStore/database" # path to db
 
-func _ready():
-	$VBoxContainer/AttackButton.grab_focus()
+var format_string = "Music/World%s"
+var actual_string = format_string % str(Global.world)
 
+var format_string_background = "Background%s"
+var actual_string_background = format_string_background % str(Global.world)
+
+
+func _ready():
+	print(actual_string)
+	$VBoxContainer/AttackButton.grab_focus()
+	get_node(actual_string_background).visible = true
+	
+	get_node(actual_string).play()
+	
+	print(get_node(actual_string_background))
+		
+		
+		
 
 func _on_QuitButton_pressed():
 	get_tree().change_scene("res://World/World.tscn")

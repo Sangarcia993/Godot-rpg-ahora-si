@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/karnaugh theme .mp3-c2fb52c9523a68307482ae502e5f56b4.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/karnaugh theme .mp3"
+dest_files=[ "res://.import/karnaugh theme .mp3-c2fb52c9523a68307482ae502e5f56b4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
