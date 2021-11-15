@@ -10,6 +10,8 @@ extends Node2D
 func _ready():
 	$AudioStreamPlayer.seek(5.0)
 	Global.world = 1
+	print(Global.enemy_health)
+	print("world1")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

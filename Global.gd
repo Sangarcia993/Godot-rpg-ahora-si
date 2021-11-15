@@ -12,7 +12,8 @@ var player_position_y = 82
 var damage_so_far = 0
 var damage_to_player_so_far = 0
 
-var enemy_health = 4
-var player_health = 1234567890
+onready var enemy_health : int = 12
+var player_health = 123
+#var enemy_type = 0
 
 var battles_fought = []

@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var acceleration = 500
 export var max_speed = 120
-const friction = 500
+export var friction = 500.0
 
 enum {
 	MOVE,
@@ -20,9 +20,10 @@ var velocity = Vector2.ZERO
 
 func _ready():
 	animationTree.active = true
-	print(Global.player_position_x)
+	#print(Global.player_position_x)
 	self.global_position = Vector2(Global.player_position_x, Global.player_position_y)
-	print(Global.pre_scene)
+	#print(Global.pre_scene)
+	#print(self.global_position)
 
 func _process(delta):
 	match state:

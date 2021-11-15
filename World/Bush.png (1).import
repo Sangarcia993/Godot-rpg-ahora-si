@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Captura de pantalla (22).png-ca3a6c414dbee475660154330211a282.stex"
+path="res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Store/Captura de pantalla (22).png"
-dest_files=[ "res://.import/Captura de pantalla (22).png-ca3a6c414dbee475660154330211a282.stex" ]
+source_file="res://World/Bush.png"
+dest_files=[ "res://.import/Bush.png-d93cca107fd3c67cf3a69a32232496ae.stex" ]
 
 [params]
 

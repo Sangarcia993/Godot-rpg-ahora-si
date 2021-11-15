@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://World4/Nuevo proyecto.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://World4/Torch.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Music and Sounds/world 4.mp3" type="AudioStream" id=5]
 [ext_resource path="res://Enemies/155-1551888_download-zip-archive-sephiroth-kh2-hd-png-download.jpg" type="Texture" id=6]
-[ext_resource path="res://weas antiguas/Portal/Portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Portal/Portal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemies/Goblin.png" type="Texture" id=8]
+[ext_resource path="res://World/Store.png" type="Texture" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -502,10 +504,9 @@ tile_data = PoolIntArray( -3145736, 0, 4, -3145735, 0, 196609, -3145734, 0, 1966
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 275.432, -1352.06 )
+position = Vector2( -1003, -362 )
 
 [node name="Camera2D2" type="Camera2D" parent="YSort/Player"]
-position = Vector2( -0.858028, 11.7716 )
 current = true
 smoothing_enabled = true
 
@@ -513,11 +514,178 @@ smoothing_enabled = true
 position = Vector2( 184.989, 44.1286 )
 
 [node name="battle 1" parent="." instance=ExtResource( 7 )]
-position = Vector2( -419.601, -1393.68 )
+position = Vector2( 83.51, -1330.45 )
 world = 4
 next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 84
+player_spawn_location_y = -1330
+enemy_type = "1"
+current_place = 4
+battle_name = "1"
 
 [node name="Bush" type="Sprite" parent="battle 1"]
-position = Vector2( 359.363, 56.1025 )
+position = Vector2( -127, 10.0001 )
 scale = Vector2( 0.454983, 0.650497 )
 texture = ExtResource( 6 )
+
+[node name="battle 2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -631.403, -441.316 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = -631
+player_spawn_location_y = -441
+enemy_type = "0"
+current_place = 4
+battle_name = "2"
+
+[node name="Bush" type="Sprite" parent="battle 2"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -452, -824 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = -452
+player_spawn_location_y = -824
+enemy_type = "0"
+current_place = 4
+battle_name = "3"
+
+[node name="Bush" type="Sprite" parent="battle 3"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 252, -823 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 252
+player_spawn_location_y = -823
+enemy_type = "0"
+current_place = 4
+battle_name = "4"
+
+[node name="Bush" type="Sprite" parent="battle 4"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -316, -300 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = -316
+player_spawn_location_y = -300
+enemy_type = "0"
+current_place = 4
+battle_name = "5"
+
+[node name="Bush" type="Sprite" parent="battle 5"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 577, -333 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 577
+player_spawn_location_y = -333
+enemy_type = "0"
+current_place = 4
+battle_name = "6"
+
+[node name="Bush" type="Sprite" parent="battle 6"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 7" parent="." instance=ExtResource( 7 )]
+position = Vector2( -147, 151 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = -147
+player_spawn_location_y = 151
+enemy_type = "0"
+current_place = 4
+battle_name = "7"
+
+[node name="Bush" type="Sprite" parent="battle 7"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 798, -95 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 798
+player_spawn_location_y = -95
+enemy_type = "0"
+current_place = 4
+battle_name = "8"
+
+[node name="Bush" type="Sprite" parent="battle 8"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 966, -681 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 966
+player_spawn_location_y = -681
+enemy_type = "0"
+current_place = 4
+battle_name = "9"
+
+[node name="Bush" type="Sprite" parent="battle 9"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 145, -345 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 145
+player_spawn_location_y = -345
+enemy_type = "0"
+current_place = 4
+battle_name = "10"
+
+[node name="Bush" type="Sprite" parent="battle 10"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="battle 11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 138, -636 )
+world = 4
+next_scene_path = "res://CombatArena/CombatArena.tscn"
+player_spawn_location_x = 138
+player_spawn_location_y = -636
+enemy_type = "0"
+current_place = 4
+battle_name = "11"
+
+[node name="Bush" type="Sprite" parent="battle 11"]
+position = Vector2( -3.99997, -1 )
+scale = Vector2( 1.87455, 1.54747 )
+texture = ExtResource( 8 )
+
+[node name="Store" parent="." instance=ExtResource( 7 )]
+position = Vector2( -95.696, -21.2851 )
+world = 4
+next_scene_path = "res://Store/Store.tscn"
+enemy_type = "0"
+battle_name = "IMPORTANTE"
+
+[node name="Sprite" type="Sprite" parent="Store"]
+position = Vector2( 2.80615, 0.920044 )
+scale = Vector2( 0.201548, 0.201548 )
+texture = ExtResource( 9 )
